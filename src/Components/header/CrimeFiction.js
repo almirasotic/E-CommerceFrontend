@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import { Logincontext } from "../context/Contextprovider";
 import { TokenContext } from "../../index";
 
-const CrimeFiction= () => {
+const CrimeFiction = () => {
   const { account, setAccount } = useContext(Logincontext);
   const { token, setToken } = useContext(TokenContext);
   const addtocart = async (id, data) => {
@@ -14,16 +14,19 @@ const CrimeFiction= () => {
     //   return;
     // }
     console.log("sending token", token.token);
-    const check = await fetch(`http://localhost:5007/addcart/${id}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token.token,
-      },
-      body: JSON.stringify({
-        data,
-      }),
-    });
+    const check = await fetch(
+      `https://e-commerce-backend-ruddy.vercel.app/addcart/${id}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token.token,
+        },
+        body: JSON.stringify({
+          data,
+        }),
+      }
+    );
     const data1 = await check.json();
     console.log(data1, "!!!!!!!!!!!!!!!!!!!!!");
     if (check.ok) {
@@ -191,104 +194,107 @@ const CrimeFiction= () => {
               </button>
             </div>
           )}
-           {isShown("Antoine Saint-Exupery") && (
-          <div className="kartica4">
-            <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978184%2F9781847399410.jpg&w=200&q=75"></img>
-            <p>White City Kevin Power Book</p>
+          {isShown("Antoine Saint-Exupery") && (
+            <div className="kartica4">
+              <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978184%2F9781847399410.jpg&w=200&q=75"></img>
+              <p>White City Kevin Power Book</p>
 
-            <h6>Antoine Saint-Exupery</h6>
-            <h5>$10.12</h5>
-            <button
-              onClick={() =>
-                addtocart("products60", {
-                  id: "products60",
-                  url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978184%2F9781847399410.jpg&w=200&q=75",
-                  detailUrl:
-                    "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978184%2F9781847399410.jpg&w=200&q=75",
-                  title: {
-                    shortTitle: "The Little Prince",
-                    longTitle: "Antoine Saint-Exupery",
-                  },
-                  price: {
-                    mrp: 20.99,
-                    cost: 16.5,
-                    discount: "45%",
-                  },
-                  description:
-                    "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
-                  discount: "-20%",
-                  tagline: "Antoine Saint-Exupery",
-                })
-              }
-            >
-              ADD TO BASKET
-            </button>
-          </div>)}
+              <h6>Antoine Saint-Exupery</h6>
+              <h5>$10.12</h5>
+              <button
+                onClick={() =>
+                  addtocart("products60", {
+                    id: "products60",
+                    url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978184%2F9781847399410.jpg&w=200&q=75",
+                    detailUrl:
+                      "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978184%2F9781847399410.jpg&w=200&q=75",
+                    title: {
+                      shortTitle: "The Little Prince",
+                      longTitle: "Antoine Saint-Exupery",
+                    },
+                    price: {
+                      mrp: 20.99,
+                      cost: 16.5,
+                      discount: "45%",
+                    },
+                    description:
+                      "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
+                    discount: "-20%",
+                    tagline: "Antoine Saint-Exupery",
+                  })
+                }
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          )}
           {isShown("Georges Simenon") && (
-          <div className="kartica5">
-            <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978019%2F9780199535989.jpg&w=200&q=75"></img>
-            <p>The Picture of Dorian Gray Book</p>
+            <div className="kartica5">
+              <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978019%2F9780199535989.jpg&w=200&q=75"></img>
+              <p>The Picture of Dorian Gray Book</p>
 
-            <h6>Georges Simenon</h6>
-            <h5>$12.15</h5>
-            <button
-              onClick={() =>
-                addtocart("products14", {
-                  id: "products14",
-                  url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fdubray-medusa-bucket.s3.eu-west-1.amazonaws.com%2F9781399724821.webp&w=200&q=75",
-                  detailUrl:
-                    "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fdubray-medusa-bucket.s3.eu-west-1.amazonaws.com%2F9781399724821.webp&w=200&q=75",
-                  title: {
-                    shortTitle: "The Exchange",
-                    longTitle: "Grisham John",
-                  },
-                  price: {
-                    mrp: 24.99,
-                    discount: "10%",
-                  },
-                  description:
-                    "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
-                  discount: "From 40",
-                  tagline: "Mooney Caz",
-                })
-              }
-            >
-              ADD TO BASKET
-            </button>
-          </div>)}
+              <h6>Georges Simenon</h6>
+              <h5>$12.15</h5>
+              <button
+                onClick={() =>
+                  addtocart("products14", {
+                    id: "products14",
+                    url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fdubray-medusa-bucket.s3.eu-west-1.amazonaws.com%2F9781399724821.webp&w=200&q=75",
+                    detailUrl:
+                      "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fdubray-medusa-bucket.s3.eu-west-1.amazonaws.com%2F9781399724821.webp&w=200&q=75",
+                    title: {
+                      shortTitle: "The Exchange",
+                      longTitle: "Grisham John",
+                    },
+                    price: {
+                      mrp: 24.99,
+                      discount: "10%",
+                    },
+                    description:
+                      "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
+                    discount: "From 40",
+                    tagline: "Mooney Caz",
+                  })
+                }
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          )}
           {isShown("Stoker Bram") && (
-          <div className="kartica6">
-            <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978000%2F9780007420087.jpg&w=200&q=75"></img>
-            <p>Dracula P/B (Collins Classics)</p>
+            <div className="kartica6">
+              <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978000%2F9780007420087.jpg&w=200&q=75"></img>
+              <p>Dracula P/B (Collins Classics)</p>
 
-            <h6>Stoker Bram</h6>
-            <h5>$3.15</h5>
-            <button
-              onClick={() =>
-                addtocart("products29", {
-                  id: "products29",
-                  url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978000%2F9780007420087.jpg&w=200&q=75",
-                  detailUrl:
-                    "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978000%2F9780007420087.jpg&w=200&q=75",
-                  title: {
-                    shortTitle: "Dracula P/B (Collins Classics)",
-                    longTitle: "Stoker Bram",
-                  },
-                  price: {
-                    mrp: 20.99,
-                    cost: 16.5,
-                    discount: "45%",
-                  },
-                  description:
-                    "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
-                  discount: "-20%",
-                  tagline: "Stoker Bram",
-                })
-              }
-            >
-              ADD TO BASKET
-            </button>
-          </div>)}
+              <h6>Stoker Bram</h6>
+              <h5>$3.15</h5>
+              <button
+                onClick={() =>
+                  addtocart("products29", {
+                    id: "products29",
+                    url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978000%2F9780007420087.jpg&w=200&q=75",
+                    detailUrl:
+                      "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978000%2F9780007420087.jpg&w=200&q=75",
+                    title: {
+                      shortTitle: "Dracula P/B (Collins Classics)",
+                      longTitle: "Stoker Bram",
+                    },
+                    price: {
+                      mrp: 20.99,
+                      cost: 16.5,
+                      discount: "45%",
+                    },
+                    description:
+                      "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
+                    discount: "-20%",
+                    tagline: "Stoker Bram",
+                  })
+                }
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          )}
           {isShown("Jane Austen") && (
             <div className="kartica7">
               <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978190%2F9781909889378.jpg&w=200&q=75"></img>
@@ -324,170 +330,175 @@ const CrimeFiction= () => {
             </div>
           )}
           {isShown("Jane Austen") && (
-          <div className="kartica8">
-            <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978180%2F9781801104388.jpg&w=200&q=75"></img>
-            <p>Everything</p>
+            <div className="kartica8">
+              <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978180%2F9781801104388.jpg&w=200&q=75"></img>
+              <p>Everything</p>
 
-            <h6>Jane Austen</h6>
-            <h5>$11.15</h5>
-            <button
-              onClick={() =>
-                addtocart("products31", {
-                  id: "products31",
-                  url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978180%2F9781801104388.jpg&w=200&q=75",
-                  detailUrl:
-                    "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978180%2F9781801104388.jpg&w=200&q=75",
-                  title: {
-                    shortTitle: "Everything",
-                    longTitle: "Jane Austen",
-                  },
-                  price: {
-                    mrp: 20.99,
-                    cost: 16.5,
-                    discount: "45%",
-                  },
-                  description:
-                    "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
-                  discount: "-20%",
-                  tagline: "Jane Austen",
-                })
-              }
-            >
-              ADD TO BASKET
-            </button>
-          </div>)}
+              <h6>Jane Austen</h6>
+              <h5>$11.15</h5>
+              <button
+                onClick={() =>
+                  addtocart("products31", {
+                    id: "products31",
+                    url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978180%2F9781801104388.jpg&w=200&q=75",
+                    detailUrl:
+                      "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978180%2F9781801104388.jpg&w=200&q=75",
+                    title: {
+                      shortTitle: "Everything",
+                      longTitle: "Jane Austen",
+                    },
+                    price: {
+                      mrp: 20.99,
+                      cost: 16.5,
+                      discount: "45%",
+                    },
+                    description:
+                      "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
+                    discount: "-20%",
+                    tagline: "Jane Austen",
+                  })
+                }
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          )}
           {isShown("Georges Simenon") && (
-          <div className="kartica9">
-            <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781789091502.jpg&w=200&q=75"></img>
-            <p>Cursed</p>
+            <div className="kartica9">
+              <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781789091502.jpg&w=200&q=75"></img>
+              <p>Cursed</p>
 
-            <h6>Georges Simenon</h6>
-            <h5>$21.15</h5>
-            <button
-              onClick={() =>
-                addtocart("products23", {
-                  id: "products23",
-                  url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781789091502.jpg&w=200&q=75",
-                  detailUrl:
-                    "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781789091502.jpg&w=200&q=75",
-                  title: {
-                    shortTitle: "Cursed",
-                    longTitle: "Georges Simenon",
-                  },
-                  price: {
-                    mrp: 20.99,
-                    cost: 16.5,
-                    discount: "45%",
-                  },
-                  description:
-                    "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
-                  discount: "-20%",
-                  tagline: "Georges Simenon",
-                })
-              }
-            >
-              ADD TO BASKET
-            </button>
-          </div>)}
+              <h6>Georges Simenon</h6>
+              <h5>$21.15</h5>
+              <button
+                onClick={() =>
+                  addtocart("products23", {
+                    id: "products23",
+                    url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781789091502.jpg&w=200&q=75",
+                    detailUrl:
+                      "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781789091502.jpg&w=200&q=75",
+                    title: {
+                      shortTitle: "Cursed",
+                      longTitle: "Georges Simenon",
+                    },
+                    price: {
+                      mrp: 20.99,
+                      cost: 16.5,
+                      discount: "45%",
+                    },
+                    description:
+                      "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
+                    discount: "-20%",
+                    tagline: "Georges Simenon",
+                  })
+                }
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          )}
           {isShown("P.g. Wodehouse") && (
-          <div className="kartica10">
-            <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978199%2F9781990048050.jpg&w=200&q=75"></img>
-            <p>Cursed</p>
+            <div className="kartica10">
+              <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978199%2F9781990048050.jpg&w=200&q=75"></img>
+              <p>Cursed</p>
 
-            <h6>P.g. Wodehouse</h6>
-            <h5>$15</h5>
-            <button
-              onClick={() =>
-                addtocart("products24", {
-                  id: "products24",
-                  url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978199%2F9781990048050.jpg&w=200&q=75",
-                  detailUrl:
-                    "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978199%2F9781990048050.jpg&w=200&q=75",
-                  title: {
-                    shortTitle: "Cursed",
-                    longTitle: "GP.g. Wodehouse",
-                  },
-                  price: {
-                    mrp: 20.99,
-                    cost: 16.5,
-                    discount: "45%",
-                  },
-                  description:
-                    "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
-                  discount: "-20%",
-                  tagline: "GP.g. Wodehouse",
-                })
-              }
-            >
-              ADD TO BASKET
-            </button>
-          </div>)}
+              <h6>P.g. Wodehouse</h6>
+              <h5>$15</h5>
+              <button
+                onClick={() =>
+                  addtocart("products24", {
+                    id: "products24",
+                    url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978199%2F9781990048050.jpg&w=200&q=75",
+                    detailUrl:
+                      "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978199%2F9781990048050.jpg&w=200&q=75",
+                    title: {
+                      shortTitle: "Cursed",
+                      longTitle: "GP.g. Wodehouse",
+                    },
+                    price: {
+                      mrp: 20.99,
+                      cost: 16.5,
+                      discount: "45%",
+                    },
+                    description:
+                      "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
+                    discount: "-20%",
+                    tagline: "GP.g. Wodehouse",
+                  })
+                }
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          )}
           {isShown("Virginia Woolf") && (
-          <div className="kartica11">
-            <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978198%2F9781988531243.jpg&w=200&q=75"></img>
-            <p>Landfall 235</p>
+            <div className="kartica11">
+              <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978198%2F9781988531243.jpg&w=200&q=75"></img>
+              <p>Landfall 235</p>
 
-            <h6>Virginia Woolf</h6>
-            <h5>$17</h5>
-            <button
-              onClick={() =>
-                addtocart("products25", {
-                  id: "products25",
-                  url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978198%2F9781988531243.jpg&w=200&q=75",
-                  detailUrl:
-                    "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978198%2F9781988531243.jpg&w=200&q=75",
-                  title: {
-                    shortTitle: "Landfall 235",
-                    longTitle: "Virginia Woolf",
-                  },
-                  price: {
-                    mrp: 20.99,
-                    cost: 16.5,
-                    discount: "45%",
-                  },
-                  description:
-                    "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
-                  discount: "-20%",
-                  tagline: "Virginia Woolf",
-                })
-              }
-            >
-              ADD TO BASKET
-            </button>
-          </div>)}
+              <h6>Virginia Woolf</h6>
+              <h5>$17</h5>
+              <button
+                onClick={() =>
+                  addtocart("products25", {
+                    id: "products25",
+                    url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978198%2F9781988531243.jpg&w=200&q=75",
+                    detailUrl:
+                      "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978198%2F9781988531243.jpg&w=200&q=75",
+                    title: {
+                      shortTitle: "Landfall 235",
+                      longTitle: "Virginia Woolf",
+                    },
+                    price: {
+                      mrp: 20.99,
+                      cost: 16.5,
+                      discount: "45%",
+                    },
+                    description:
+                      "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
+                    discount: "-20%",
+                    tagline: "Virginia Woolf",
+                  })
+                }
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          )}
           {isShown("Jane Austen") && (
-          <div className="kartica12">
-            <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781787301405.jpg&w=200&q=75"></img>
-            <p>Orwell on Freedom</p>
+            <div className="kartica12">
+              <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781787301405.jpg&w=200&q=75"></img>
+              <p>Orwell on Freedom</p>
 
-            <h6>Jane Austen</h6>
-            <h5>$12</h5>
-            <button
-              onClick={() =>
-                addtocart("products35", {
-                  id: "products35",
-                  url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781787301405.jpg&w=200&q=75",
-                  detailUrl:
-                    "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781787301405.jpg&w=200&q=75",
-                  title: {
-                    shortTitle: "Orwell on Freedom",
-                    longTitle: "Jane Austen",
-                  },
-                  price: {
-                    mrp: 20.99,
-                    cost: 16.5,
-                    discount: "45%",
-                  },
-                  description:
-                    "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
-                  discount: "-20%",
-                  tagline: "Jane Austen",
-                })
-              }
-            >
-              ADD TO BASKET
-            </button>
-          </div>)}
+              <h6>Jane Austen</h6>
+              <h5>$12</h5>
+              <button
+                onClick={() =>
+                  addtocart("products35", {
+                    id: "products35",
+                    url: "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781787301405.jpg&w=200&q=75",
+                    detailUrl:
+                      "https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978178%2F9781787301405.jpg&w=200&q=75",
+                    title: {
+                      shortTitle: "Orwell on Freedom",
+                      longTitle: "Jane Austen",
+                    },
+                    price: {
+                      mrp: 20.99,
+                      cost: 16.5,
+                      discount: "45%",
+                    },
+                    description:
+                      "** A Book of the Year in The Times - The New Statesman - Observer - Financial Times - Irish Times - Irish Independent - Times Literary Supplement ** WINNER OF THE ORWELL PRIZE AND THE KERRY GROUP IRISH NOVEL OF THE YEAR AWARD SHORTLISTED FOR THE RATHBONES FOLIO PRIZE AND THE IRISH NOVEL OF THE YEAR AT THE DALKEY LITERARY AWARDS 'Exquisite.' Damon Galgut 'Masterly.' The Times 'Miraculous.' Herald 'Astonishing.' Colm Tóibìn 'Stunning.' Sunday Independent 'Absolutely beautiful.' Douglas Stuart It is 1985, in an Irish town. During the weeks leading up to Christmas, Bill Furlong, a coal and timber merchant, faces into his busiest season. As he does the rounds, he feels the past rising up to meet him - and encounters the complicit silences of a people controlled by the Church.",
+                    discount: "-20%",
+                    tagline: "Jane Austen",
+                  })
+                }
+              >
+                ADD TO BASKET
+              </button>
+            </div>
+          )}
         </div>
       </div>
       <div class="column1">
@@ -567,7 +578,6 @@ const CrimeFiction= () => {
               type="checkbox"
               id="myCheckbox"
               onChange={() => handleCheckbox("Christie Agatha")}
-              
             ></input>
             <span className="checkpomeraj">Christie Agatha</span>
             <span className="spanpomeraj6">31</span>

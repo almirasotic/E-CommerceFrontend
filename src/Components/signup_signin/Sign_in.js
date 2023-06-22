@@ -35,16 +35,19 @@ const Sign_in = () => {
     const { email, password } = logdata;
     // console.log(email);
     try {
-      const res = await fetch("http://localhost:5007/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+      const res = await fetch(
+        "https://e-commerce-backend-ruddy.vercel.app/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        }
+      );
 
       const data = await res.json();
       // console.log(data);

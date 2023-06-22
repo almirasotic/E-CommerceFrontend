@@ -32,17 +32,20 @@ const Buynow = () => {
   const cartDataNew = useMemo(() => makeNewCartData(cartdata), [cartdata]);
   console.log("cartdata", cartdata);
   const getdatabuy = async () => {
-    const res = await fetch("http://localhost:5007/cartdetails", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token.token,
-      },
+    const res = await fetch(
+      "https://e-commerce-backend-ruddy.vercel.app/cartdetails",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token.token,
+        },
 
-      authorize: "token iz cookie",
-      // credentials:"include"
-    });
+        authorize: "token iz cookie",
+        // credentials:"include"
+      }
+    );
 
     const data = await res.json();
     // console.log(data.carts);

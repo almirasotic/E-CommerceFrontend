@@ -16,7 +16,7 @@ const Activate = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5007/aktiviraj?token=${token}`,
+        `https://e-commerce-backend-ruddy.vercel.app/aktiviraj?token=${token}`,
         {
           method: "GET",
           headers: {

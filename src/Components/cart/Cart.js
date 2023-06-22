@@ -25,22 +25,27 @@ const Cart = () => {
   // console.log([inddata]);
 
   const getinddata = async () => {
-    const res = await fetch(`http://localhost:5007/getproductsone/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token.token,
-      },
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   credentials: "include",
-    });
+    const res = await fetch(
+      `https://e-commerce-backend-ruddy.vercel.app/getproductsone/${id}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token.token,
+        },
+        //   headers: {
+        //     Accept: "application/json",
+        //     "Content-Type": "application/json",
+        //   },
+        //   credentials: "include",
+      }
+    );
 
     const data = await res.json();
     console.log(data);
-    console.log(`http://localhost:5007/getproductsone/${id}`);
+    console.log(
+      `https://e-commerce-backend-ruddy.vercel.app/getproductsone/${id}`
+    );
 
     if (res.status !== 201) {
       alert("no data available");
@@ -97,16 +102,19 @@ const Cart = () => {
     }
     let check;
     for (let i = 0; i < quantity; i++) {
-      check = await fetch(`http://localhost:5007/addcart/${id}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token.token,
-        },
-        body: JSON.stringify({
-          inddata,
-        }),
-      });
+      check = await fetch(
+        `https://e-commerce-backend-ruddy.vercel.app/addcart/${id}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token.token,
+          },
+          body: JSON.stringify({
+            inddata,
+          }),
+        }
+      );
     }
     setQuantity(1);
     const data1 = await check.json();

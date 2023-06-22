@@ -15,36 +15,40 @@ const Maincomp = () => {
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
-
   return (
     <>
       <div className="home_section">
         <div className="banner_part">
           <Banner />
         </div>
-       
-        <div className="slide_part">
-          <div className="left_slide">
-            <Slide title="Bestsellers" products={products.slice(0, 5)} />
-          </div>
-          {/* <div className="right_slide">
+        {products != null ? (
+          <div>
+            <div className="slide_part">
+              <div className="left_slide">
+                <Slide title="Bestsellers" products={products.slice(0, 5)} />
+              </div>
+              {/* <div className="right_slide">
                             <h4>Festive latest launches</h4>
                          
                             <a href="#">see more</a>
                         </div> */}
-        </div>
+            </div>
 
-        <Slide title="Just Landed" products={products.slice(5, 10)} />
-        {/* ovo je za sliku ispod */}
-        {/* <div className="center_img">
+            <Slide title="Just Landed" products={products.slice(5, 10)} />
+            {/* ovo je za sliku ispod */}
+            {/* <div className="center_img">
                    
                 </div> */}
 
-        <Slide title="Pre-order" products={products.slice(10, 15)} />
-        <Slide
-          title="Dubray Staff Recommended Reads"
-          products={products.slice(15,20)}
-        />
+            <Slide title="Pre-order" products={products.slice(10, 15)} />
+            <Slide
+              title="Dubray Staff Recommended Reads"
+              products={products.slice(15, 20)}
+            />
+          </div>
+        ) : (
+          <h1 className="text-center">Products are loading...</h1>
+        )}
       </div>
 
       <Divider />
@@ -73,4 +77,4 @@ export default Card(imeKnjige, cena, autor, slika)=>{
     <h1>${author}
   </div>
 }
-*/ 
+*/

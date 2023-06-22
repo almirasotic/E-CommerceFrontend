@@ -1,11 +1,14 @@
 export const getProducts = () => async (dispatch) => {
   try {
-    const data = await fetch("http://localhost:5007/getproducts", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const data = await fetch(
+      "https://e-commerce-backend-ruddy.vercel.app/getproducts",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const res = await data.json();
     // console.log(res);

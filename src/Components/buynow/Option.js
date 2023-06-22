@@ -21,15 +21,18 @@ const Option = ({
   const removedata = async (deldata) => {
     try {
       //   const res = await fetch(`http://localhost:5007/remove/${id}`, {
-      const res = await fetch(`http://localhost:5007/remove/${deldata}`, {
-        method: "DELETE",
-        headers: {
-          // Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token.token,
-        },
-        //credentials: "include",
-      });
+      const res = await fetch(
+        `https://e-commerce-backend-ruddy.vercel.app/remove/${deldata}`,
+        {
+          method: "DELETE",
+          headers: {
+            // Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token.token,
+          },
+          //credentials: "include",
+        }
+      );
 
       const data = await res.json();
       console.log(data);

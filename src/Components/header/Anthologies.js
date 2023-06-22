@@ -14,16 +14,19 @@ const Anthologies = () => {
     //   return;
     // }
     console.log("sending token", token.token);
-    const check = await fetch(`http://localhost:5007/addcart/${id}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token.token,
-      },
-      body: JSON.stringify({
-        data,
-      }),
-    });
+    const check = await fetch(
+      `https://e-commerce-backend-ruddy.vercel.app/addcart/${id}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token.token,
+        },
+        body: JSON.stringify({
+          data,
+        }),
+      }
+    );
     const data1 = await check.json();
     console.log(data1, "!!!!!!!!!!!!!!!!!!!!!");
     if (check.ok) {
@@ -68,7 +71,7 @@ const Anthologies = () => {
   return (
     <div class="row">
       <div class="column2">
-      <div className="applied">
+        <div className="applied">
           <h3>Applied:</h3>
           <div className="applied2">
             Category: Fiction - Anthologies -{" "}
@@ -377,7 +380,7 @@ const Anthologies = () => {
               ADD TO BASKET
             </button>
           </div>
-          
+
           <div className="kartica10">
             <img src="https://www.dubraybooks.ie/_next/image?url=https%3A%2F%2Fwww.bibdsl.co.uk%2Fbds-images%2Fl%2F978199%2F9781990048050.jpg&w=200&q=75"></img>
             <p>Cursed</p>

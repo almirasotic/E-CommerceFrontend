@@ -14,16 +14,19 @@ const HistoricalFiction = () => {
     //   return;
     // }
     console.log("sending token", token.token);
-    const check = await fetch(`http://localhost:5007/addcart/${id}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token.token,
-      },
-      body: JSON.stringify({
-        data,
-      }),
-    });
+    const check = await fetch(
+      `https://e-commerce-backend-ruddy.vercel.app/addcart/${id}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token.token,
+        },
+        body: JSON.stringify({
+          data,
+        }),
+      }
+    );
     const data1 = await check.json();
     console.log(data1, "!!!!!!!!!!!!!!!!!!!!!");
     if (check.ok) {

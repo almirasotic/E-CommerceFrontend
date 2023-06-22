@@ -56,8 +56,6 @@ const Slide = ({ title, products }) => {
     });
 
     const data = await res.json();
-    console.log(data);
-    console.log(`http://localhost:5007/getproductsone/${id}`);
 
     if (res.status !== 201) {
       alert("no data available");
@@ -76,16 +74,19 @@ const Slide = ({ title, products }) => {
       return;
     }
     console.log("sending token", token.token);
-    const check = await fetch(`http://localhost:5007/addcart/${id}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + token.token,
-      },
-      body: JSON.stringify({
-        i,
-      }),
-    });
+    const check = await fetch(
+      `https://e-commerce-backend-ruddy.vercel.app/addcart/${id}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token.token,
+        },
+        body: JSON.stringify({
+          i,
+        }),
+      }
+    );
     const data1 = await check.json();
     console.log(data1, "!!!!!!!!!!!!!!!!!!!!!");
     if (check.ok) {
@@ -130,15 +131,15 @@ const Slide = ({ title, products }) => {
               <span
                 className="product-name"
                 style={{ color: "gray", fontSize: "17px" }}
-              >€
-                {product.price.mrp}
+              >
+                €{product.price.mrp}
               </span>
               <span
                 className="product-price"
                 style={{ color: "#70c8b5", fontSize: "17px" }}
               >
-                {" "}€
-                {product.price.cost} 
+                {" "}
+                €{product.price.cost}
               </span>
             </p>
 

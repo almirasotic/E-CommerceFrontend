@@ -58,14 +58,17 @@ const Navbaar = () => {
   // console.log(account);
 
   const getdetailsvaliduser = async () => {
-    const res = await fetch("http://localhost:5007/validuser", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-    });
+    const res = await fetch(
+      "https://e-commerce-backend-ruddy.vercel.app/validuser",
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      }
+    );
 
     const data = await res.json();
     // console.log(data);
