@@ -1,0 +1,709 @@
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 10%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.applied {
+  height: 10%;
+  margin-left: -120px;
+}
+.applied button {
+  width: 20%;
+  height: 40%;
+  margin-left: 75%;
+  margin-top: -15px;
+  background-color: rgb(116, 238, 116);
+  border: none;
+  color: white;
+}
+.applied button:hover {
+  background-color: #002758;
+}
+.applied2 {
+  background-color: #002758;
+  color: white;
+  width: 60%;
+  margin-left: 85px;
+  margin-top: -25px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  /* background-color: red; */
+  width: 100%;
+  height: 220vh;
+  margin-top: 5%;
+}
+.column1 {
+  width: 50%;
+  height: 100vh;
+  /* background-color: blue; */
+}
+.column2 {
+  width: 50%;
+  height: 100vh;
+  /* background-color: green; */
+  float: right;
+}
+.column3 {
+  background-color: black;
+  height: 50%;
+}
+.kartica1 {
+  margin-top: 10px;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica2 {
+  margin-top: -85px;
+  margin-left: 28%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica3 {
+  margin-top: -85px;
+  margin-left: 56%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica1 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica1 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica1 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica1 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+
+.kartica2 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica2 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica2 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica2 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+.kartica2 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica1 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica3 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica4 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica5 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica6 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica7 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica8 img {
+  height: 170%;
+  width: 100%;
+}
+
+.kartica9 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica10 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica11 img {
+  height: 170%;
+  width: 100%;
+}
+.kartica12 img {
+  height: 170%;
+  width: 100%;
+}
+
+.kartica3 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica3 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica3 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica3 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+.kartica4 {
+  margin-top: 190px;
+  /* margin-left: 56%; */
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+
+.kartica4 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica4 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica4 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica4 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+.kartica5 {
+  margin-top: -85px;
+  margin-left: 28%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica5 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica5 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica5 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica5 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+.kartica6 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica6 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica6 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica6 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+.kartica6 {
+  margin-top: -85px;
+  margin-left: 56%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+
+.kartica7 {
+  margin-top: 200px;
+  margin-left: 28%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica7 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica7 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica7 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica7 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+
+.kartica8 {
+  margin-top: -85px;
+  margin-left: 0%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica8 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica8 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica8 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica8 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+
+.kartica9 {
+  margin-top: -85px;
+  margin-left: 56%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica9 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica9 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica9 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica9 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+
+.kartica10 {
+  margin-top: 170px;
+  margin-left: 0%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica10 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica10 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica10 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica10 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+
+.kartica11 {
+  margin-top: -85px;
+  margin-left: 28%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica11 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica11 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica11 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica11 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+
+.kartica12 {
+  margin-top: -85px;
+  margin-left: 56%;
+  width: 26%;
+  height: 50%;
+  background-color: black;
+}
+.kartica12 p {
+  text-align: center;
+  color: #00205b;
+}
+.kartica12 h6 {
+  color: #808080;
+  text-align: center;
+}
+.kartica12 h5 {
+  text-align: center;
+  color: green;
+}
+.kartica12 button {
+  width: 100%;
+  height: 30px;
+  background-color: #00205b;
+  color: white;
+  border: none;
+}
+
+.zaprvukarticu {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.zaprvukarticu div {
+  margin: unset;
+  margin-top: 160px;
+}
+
+.name-span {
+  color: white;
+}
+
+.name-x-span {
+  color: darkgrey;
+  cursor: pointer;
+}
+
+.lijevo1 {
+  width: 70%;
+  height: 15%;
+  /* background-color: red; */
+}
+.lijevo1 h2 {
+  color: #32382d;
+  margin-left: 35px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
+}
+.lijevo1 h3 {
+  margin-left: 35px;
+  color: #374151;
+}
+.lijevo1 h4 a {
+  margin-left: 35px;
+  color: black;
+  list-style: none;
+}
+
+.lijevo2 {
+  width: 70%;
+  height: 85%;
+  margin-top: 15px;
+}
+.lijevo2 h3 {
+  color: #32382d;
+  margin-left: 35px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
+}
+.lijevo2 input span {
+  margin-left: 35px;
+}
+.checkpomeraj {
+  margin-left: 15px;
+}
+.checkbox-wrapper {
+  margin-left: 35px;
+  padding: 15px;
+}
+.spanpomeraj {
+  margin-left: 200px;
+}
+.spanpomeraj1 {
+  margin-left: 155px;
+}
+.spanpomeraj2 {
+  margin-left: 168px;
+}
+.spanpomeraj3 {
+  margin-left: 184px;
+}
+.spanpomeraj4 {
+  margin-left: 195px;
+}
+.spanpomeraj5 {
+  margin-left: 199px;
+}
+.spanpomeraj6 {
+  margin-left: 175px;
+}
+.spanpomeraj7 {
+  margin-left: 185px;
+}
+.spanpomeraj8 {
+  margin-left: 203px;
+}
+.spanpomeraj9 {
+  margin-left: 145px;
+}
+.spanpomeraj10 {
+  margin-left: 245px;
+}
+.spanpomeraj11 {
+  margin-left: 130px;
+}
+.spanpomeraj11 {
+  margin-left: 130px;
+}
+.spanpomeraj12 {
+  margin-left: 235px;
+}
+
+@media (max-width: 768px) {
+  .column {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .applied {
+    height: 10%;
+    margin-left: 0;
+  }
+
+  .applied button {
+    width: 20%;
+    height: 40%;
+    margin-left: 75%;
+    margin-top: 60px;
+    background-color: rgb(116, 238, 116);
+    border: none;
+    text-decoration: none;
+    color: white;
+    display: none;
+  }
+
+  .applied2 {
+    background-color: #002758;
+    color: white;
+    width: 50%;
+    margin-left: 85px;
+    margin-top: -25px;
+    display: none;
+  }
+
+  .row {
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    /* display: none; */
+  }
+
+  .column1 {
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+
+  .column2 {
+    width: 100%;
+    height: auto;
+    /* display: none; */
+  }
+
+  .kartica1,
+  .kartica2,
+  .kartica3,
+  .kartica4,
+  .kartica5,
+  .kartica6,
+  .kartica7,
+  .kartica8,
+  .kartica9,
+  .kartica10,
+  .kartica11,
+  .kartica12 {
+    width: 20%;
+    height: auto;
+    display: none;
+  }
+
+  .kartica4,
+  .kartica5,
+  .kartica6,
+  .kartica7,
+  .kartica8,
+  .kartica9,
+  .kartica10,
+  .kartica11,
+  .kartica12 {
+    display: none;
+  }
+
+  .zaprvukarticu div {
+    margin: unset;
+    margin-top: 10px;
+  }
+
+  .lijevo1 h2,
+  .lijevo1 h3,
+  .lijevo1 h4 a,
+  .lijevo2 h3 {
+    margin-left: 15px;
+  }
+
+  .lijevo2 input span,
+  .checkbox-wrapper {
+    margin-left: 15px;
+  }
+
+  .spanpomeraj,
+  .spanpomeraj1,
+  .spanpomeraj2,
+  .spanpomeraj3,
+  .spanpomeraj4,
+  .spanpomeraj5,
+  .spanpomeraj6,
+  .spanpomeraj7,
+  .spanpomeraj8,
+  .spanpomeraj9,
+  .spanpomeraj10,
+  .spanpomeraj11,
+  .spanpomeraj12 {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .show-code-button {
+    margin-top: -80px;
+  }
+}
+@media (max-width: 480px) {
+  .applied {
+    margin-top: 40px;
+    margin-right: 100px;
+    margin-left: -50px;
+  }
+  .applied button {
+    margin-top: 0px;
+    margin-left: 220px;
+  }
+
+  .applied2 {
+    margin-top: 50px;
+  }
+  .applied h3 {
+    margin-top: 40px;
+    margin-left: 50px;
+  }
+  .column1 {
+    width: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .kartica1 {
+    width: 30%;
+    height: 40%;
+    margin-right: 50px;
+  }
+  .kartica2 {
+    margin-left: 50px;
+    width: 25%;
+    height: 35%;
+  }
+  .kartica3 {
+    width: 55%;
+    height: 40%;
+  }
+}
+
+.show-dugme {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .lijevo2 {
+    display: none;
+  }
+  .show-dugme {
+    display: block;
+  }
+}

@@ -1,0 +1,27 @@
+.dugmeprvo{
+margin-left: 600px;
+margin-top: 300px;
+background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+height: 50px;
+width: 300px;
+font-size: 30px;
+border-radius: 10px;
+border: 1px solid #adb1b8;
+outline: none;
+background: linear-gradient(to bottom, #0f92e9, #d6e5f4);
+ 
+}
+.drugi{
+    width: 50vh;
+    height: 30vh;
+    background-color: white;
+    
+}
+@media (min-width: 768px) {
+    .dugmeprvo {
+      margin-left: 600px;
+      margin-top: 300px;
+      font-size: 30px;
+      max-width: none;
+    }
+  }

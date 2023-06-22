@@ -1,0 +1,285 @@
+.NonGlavni {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  overflow-y: auto;
+}
+/* width: 100%;
+height: 150vh;
+margin-top: 5%; */
+
+.Sporedni {
+  width: 80%;
+  height: 100vh;
+  /* background-color: green; */
+  margin-left: 130px;
+}
+.Sporedni h2 {
+  color: #00205b;
+  font-family: Libre Baskerville;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.h1Non {
+  font-family: Libre Baskerville;
+  color: #21282d;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.slikaNon2 {
+  width: 100%;
+  height: 25%;
+  margin-top: 15px;
+}
+.Non2P {
+  font-family: Libre Baskerville;
+  color: #21282d;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+.kartica1Non {
+  width: 15%;
+  height: 40%;
+  /* background-color: blue; */
+  margin-top: 15px;
+}
+.kartica1Non img {
+  width: 100%;
+  height: 60%;
+}
+.kartica1Non p {
+  /* margin-top: 20px; */
+  color: black;
+  text-align: center;
+}
+.kartica1Non h5 {
+  text-align: center;
+  color: green;
+}
+.kartica1Non button {
+  width: 100%;
+  background-color: #002758;
+  height: 12%;
+  color: white;
+  border: none;
+}
+
+.kartica2Non {
+  width: 15%;
+  height: 40%;
+  /* background-color: blue; */
+  margin-top: -275px;
+  margin-left: 200px;
+}
+.kartica2Non img {
+  width: 100%;
+  height: 60%;
+}
+.kartica2Non p {
+  /* margin-top: 20px; */
+  color: black;
+  text-align: center;
+}
+.kartica2Non h5 {
+  text-align: center;
+  color: green;
+}
+.kartica2Non button {
+  width: 100%;
+  background-color: #002758;
+  height: 12%;
+  color: white;
+  border: none;
+}
+
+.kartica3Non {
+  width: 15%;
+  height: 40%;
+  /* background-color: blue; */
+  margin-top: -275px;
+  margin-left: 400px;
+}
+.kartica3Non img {
+  width: 100%;
+  height: 60%;
+}
+.kartica3Non p {
+  /* margin-top: 20px; */
+  color: black;
+  text-align: center;
+}
+.kartica3Non h5 {
+  text-align: center;
+  color: green;
+}
+
+.kartica3Non button {
+  width: 100%;
+  background-color: #002758;
+  height: 12%;
+  color: white;
+  border: none;
+}
+
+.kartica4Non {
+  width: 15%;
+  height: 40%;
+  /* background-color: blue; */
+  margin-top: -275px;
+  margin-left: 600px;
+}
+.kartica4Non img {
+  width: 100%;
+  height: 60%;
+}
+.kartica4Non p {
+  /* margin-top: 20px; */
+  color: black;
+  text-align: center;
+}
+.kartica4Non h5 {
+  text-align: center;
+  color: green;
+}
+.kartica4Non button {
+  width: 100%;
+  background-color: #002758;
+  height: 12%;
+  color: white;
+  border: none;
+}
+
+.kartica5Non {
+  width: 15%;
+  height: 40%;
+  /* background-color: blue; */
+  margin-top: -275px;
+  margin-left: 800px;
+}
+.kartica5Non img {
+  width: 100%;
+  height: 60%;
+}
+.kartica5Non p {
+  /* margin-top: 20px; */
+  color: black;
+  text-align: center;
+}
+.kartica5Non h5 {
+  text-align: center;
+  color: green;
+}
+.kartica5Non button {
+  width: 100%;
+  background-color: #002758;
+  height: 12%;
+  color: white;
+  border: none;
+}
+
+.kartica6Non {
+  width: 15%;
+  height: 40%;
+  /* background-color: blue; */
+  margin-top: 15px;
+}
+.kartica6Non img {
+  width: 100%;
+  height: 60%;
+}
+.kartica6Non p {
+  /* margin-top: 20px; */
+  color: black;
+  text-align: center;
+}
+.kartica6Non h5 {
+  text-align: center;
+  color: green;
+}
+.kartica6Non button {
+  width: 100%;
+  background-color: #002758;
+  height: 12%;
+  color: white;
+  border: none;
+}
+
+.kartica7Non {
+  width: 15%;
+  height: 40%;
+  /* background-color: blue; */
+  margin-top: -275px;
+  margin-left: 200px;
+}
+.kartica7Non img {
+  width: 100%;
+  height: 60%;
+}
+.kartica7Non p {
+  /* margin-top: 20px; */
+  color: black;
+  text-align: center;
+}
+.kartica7Non h5 {
+  text-align: center;
+  color: green;
+}
+.kartica7Non button {
+  width: 100%;
+  background-color: #002758;
+  height: 12%;
+  color: white;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  .kartica {
+    width: 45%;
+    float: left;
+  }
+  .Sporedni {
+    margin-left: 0;
+    width: 100%;
+  }
+  .kartica1Non {
+    width: 70%;
+    margin-left: 55px;
+  }
+  .kartica2Non {
+    width: 70%;
+    margin-left: 55px;
+    margin-top: 40px;
+  }
+  .kartica3Non {
+    width: 70%;
+    margin-left: 55px;
+    margin-top: 80px;
+  }
+  .kartica4Non {
+    width: 70%;
+    margin-left: 55px;
+    margin-top: 120px;
+  }
+  .kartica5Non {
+    width: 70%;
+    margin-left: 55px;
+    margin-top: 160px;
+  }
+  .kartica6Non {
+    display: none;
+  }
+  .kartica7Non {
+    width: 70%;
+    margin-left: 55px;
+    margin-top: 240px;
+  }
+}
+
+/* Responzivnost za prikaz jedne kartice ispod druge */
+@media screen and (max-width: 480px) {
+  .kartica {
+    width: 100%;
+    float: none;
+  }
+}
